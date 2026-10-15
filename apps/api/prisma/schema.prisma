@@ -1,0 +1,15 @@
+// RealWorld 嘅 model（User、Article、Comment、Tag…）要你自己逐個 issue 加。
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Prisma 要至少一個 model 先 generate 到 client。
+// 呢個只係佔位，唔屬於 RealWorld；加咗 User model 之後就可以刪走。
+model Placeholder {
+  id Int @id @default(autoincrement())
+}
